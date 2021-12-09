@@ -5,3 +5,4 @@ rem 戻り値が1ならブラウザ起動
 if %ERRORLEVEL% equ 1 (
     start chrome.exe "https://twitcasting.tv/%USER_ID%"
 )
+exit 0

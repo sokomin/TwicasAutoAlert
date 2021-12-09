@@ -18,7 +18,7 @@ with open('exist.txt', 'r') as f:
     if call_time < 0:
         print("[alert] 12時間以内に配信やってるよ")
         with open('res.log', "a", encoding='utf-8') as f:
-            f.write(dt_log.strftime('%Y年%m月%d日%H時%M分%S秒') + " res 2")
+            f.write(dt_log.strftime('%Y年%m月%d日%H時%M分%S秒') + " res 2\n")
         exit(2)
 
 with open('sample.wav', 'rb') as f:
@@ -38,10 +38,10 @@ if len(d['movies']) > 2:
     winsound.PlaySound(data, winsound.SND_MEMORY)
     print("[alert] ツイキャス始まってるよ")
     with open('res.log', "a", encoding='utf-8') as f:
-        f.write(dt_log.strftime('%Y年%m月%d日%H時%M分%S秒') + " res 1")
+        f.write(dt_log.strftime('%Y年%m月%d日%H時%M分%S秒') + " res 1\n")
     with open('exist.txt', "w", encoding='utf-8') as f:
         f.write(str(crnt))
     exit(1)
 with open('res.log', "a", encoding='utf-8') as f:
-    f.write(dt_log.strftime('%Y年%m月%d日%H時%M分%S秒') + " res 0")
+    f.write(dt_log.strftime('%Y年%m月%d日%H時%M分%S秒') + " res 0\n")
 exit(0)
