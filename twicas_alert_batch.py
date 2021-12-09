@@ -35,12 +35,12 @@ d = api.search_live_movies(search_type='word', context=search_context)
 # print(d['movies'])
 
 if len(d['movies']) > 2:
-    winsound.PlaySound(data, winsound.SND_MEMORY)
-    print("[alert] ツイキャス始まってるよ")
     with open('res.log', "a", encoding='utf-8') as f:
         f.write(dt_log.strftime('%Y年%m月%d日%H時%M分%S秒') + " res 1\n")
     with open('exist.txt', "w", encoding='utf-8') as f:
         f.write(str(crnt))
+    print("[alert] ツイキャス始まってるよ")
+    winsound.PlaySound(data, winsound.SND_MEMORY)
     exit(1)
 with open('res.log', "a", encoding='utf-8') as f:
     f.write(dt_log.strftime('%Y年%m月%d日%H時%M分%S秒') + " res 0\n")
