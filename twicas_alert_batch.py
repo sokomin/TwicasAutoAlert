@@ -32,9 +32,9 @@ api = API(application_basis=app_basis)
 #     print('{}: {}'.format(t[0], t[1]))
 
 d = api.search_live_movies(search_type='word', context=search_context)
-# print(d['movies'])
+print(str(d['movies']))
 
-if len(d['movies']) > 2:
+if len(str(d['movies'])) > 2:
     with open('res.log', "a", encoding='utf-8') as f:
         f.write(dt_log.strftime('%Y年%m月%d日%H時%M分%S秒') + " res 1\n")
     with open('exist.txt', "w", encoding='utf-8') as f:
